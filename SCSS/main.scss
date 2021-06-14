@@ -29,7 +29,7 @@ body {
 
 .main {
     @include flexCenter(row);
-    width: 80%;
+    width: calc(80% - 40%);
     margin: 0 auto;
 
     #{&}__p1 {
@@ -42,6 +42,10 @@ body {
     }
     #{&}__p2 {
         @extend .main__p1;
+
+        &:hover {
+            color: $accent-color;
+        }
     }
     @include mobile {
         flex-direction: column;
